@@ -1,0 +1,20 @@
+body {
+	background: #f0f0f0;
+}
+
+.container {
+	max-width: 600px;
+	padding: 20px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.question {
+	padding: 20px;
+	box-sizing: border-box;
+    margin-bottom: 20px;
+    background: #fff;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
+}
