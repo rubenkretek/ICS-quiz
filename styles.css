@@ -17,4 +17,25 @@ body {
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
          box-shadow: 0 10px 6px -6px #777;
+    display: none;
+}
+
+.answer {
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	background: #98f298;
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    display: none;
+}
+
+.show {
+    display: block;;
+}
+
+.disable {
+	background: #e1e1e1;
+	color: #9b9b9b;
 }
