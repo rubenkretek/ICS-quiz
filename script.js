@@ -5,6 +5,8 @@ let button2b = document.getElementById('2b-submit');
 
 let borrowingAmount = 0;
 
+let amountTextField = document.getElementById('amount-borrowing');
+
 const question1 = document.getElementById('question-1');
 const question2 = document.getElementById('question-2');
 const question2b = document.getElementById('question-2b');
@@ -45,7 +47,7 @@ function disableQuestion(question) {
     var buttons = question.querySelectorAll('button');    
     var inputs = question.querySelectorAll('input');
     buttons.forEach(element => {
-        element.disabled = true;    
+        element.disabled = true;        
     });
     inputs.forEach(element => {
         element.disabled = true;    
@@ -70,11 +72,13 @@ button1no.addEventListener('click', event => {
 button2.addEventListener('click', event => {
     let inputField = document.getElementById('2-input').value;
     borrowingAmount = inputField;
+    let borrowingAmountPercantage = borrowingAmount * 1.3;
 
     if (borrowingAmount < 250000) {
         showAnswer(anwserNA);   
     } else if (borrowingAmount >= 250000 && borrowingAmount <= 4000000){
-        console.log('carry on with form');        
+        amountTextField.innerHTML = borrowingAmountPercantage;
+        showQuestion(question3);        
     } else if (borrowingAmount > 4000000) {
         checkAmount(borrowingAmount);        
     }
