@@ -2,9 +2,10 @@ body {
 	background: #f0f0f0;
 }
 
-#main-title {
+.main-title {
 	text-align: center;
 }
+
 .container {
 	max-width: 600px;
 	padding: 20px;
