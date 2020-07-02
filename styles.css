@@ -1,45 +1,45 @@
 body {
-	background: #f0f0f0;
+  background: #f0f0f0;
 }
 
 .main-title {
-	text-align: center;
+  text-align: center;
 }
 
 .container {
-	max-width: 600px;
-	padding: 20px;
-	text-align: center;
-	margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .question {
-	padding: 20px;
-	box-sizing: border-box;
-    margin-bottom: 20px;
-    background: #fff;
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-    -moz-box-shadow: 0 10px 6px -6px #777;
-         box-shadow: 0 10px 6px -6px #777;
-    display: none;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background: #fff;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  display: none;
 }
 
 .answer {
-	padding: 20px;
-	box-sizing: border-box;
-	margin-bottom: 20px;
-	background: #98f298;
-	-webkit-box-shadow: 0 10px 6px -6px #777;
-	-moz-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 0 10px 6px -6px #777;
-    display: none;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background: #98f298;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  display: none;
 }
 
 .show {
-    display: block;;
+  display: block;
 }
 
 .disable {
-	background: #e1e1e1;
-	color: #9b9b9b;
+  background: #e1e1e1;
+  color: #9b9b9b;
 }
