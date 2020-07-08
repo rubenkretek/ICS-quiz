@@ -1,30 +1,44 @@
-body {
+/* body {
   background: #f0f0f0;
-}
+} */
 
-.main-title {
+.bricks-and-mortar-quiz .main-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: bold;
+  color: #717171;
   text-align: center;
 }
 
-.container {
+.bricks-and-mortar-quiz .container {
   max-width: 600px;
   padding: 20px;
   text-align: center;
   margin: 0 auto;
 }
 
-.question {
+.bricks-and-mortar-quiz .container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #ca0606;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.bricks-and-mortar-quiz .question {
   padding: 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
   background: #fff;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
+  -webkit-box-shadow: 0px 8px 16px 0px #00000026;
+  -moz-box-shadow: 0px 8px 16px 0px #00000026;
+  box-shadow: 0px 8px 16px 0px #00000026;
   display: none;
+  transition: all 0.3s ease;
 }
 
-.answer {
+.bricks-and-mortar-quiz .answer {
   padding: 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -35,11 +49,87 @@ body {
   display: none;
 }
 
-.show {
+.bricks-and-mortar-quiz .show {
   display: block;
 }
 
-.disable {
-  background: #e1e1e1;
+.bricks-and-mortar-quiz button {
+  color: #fff;
+  background: #ca0606 no-repeat scroll 0 0;
+  padding: 8px;
+  display: inline-block;
+  transition: all 0.5s ease;
+  margin-left: 0px;
+  margin-right: 10px;
+  border: none;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  max-width: 180px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.bricks-and-mortar-quiz button:hover {
+}
+
+/*Question 2*/
+.bricks-and-mortar-quiz #question-2 .user-input-container,
+.bricks-and-mortar-quiz #question-2b .user-input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.bricks-and-mortar-quiz input {
+  padding: 4px 5px;
+  display: inline-block;
+  transition: all 0.5s ease;
+  margin-bottom: 20px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  text-align: left;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px #8f8f8f;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.bricks-and-mortar-quiz input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+span.currencyinput {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.bricks-and-mortar-quiz #question-2 button,
+.bricks-and-mortar-quiz #question-2b button {
+  margin: 0 auto;
+}
+
+/*Disabled questions*/
+
+.bricks-and-mortar-quiz .disable button {
+  background: #9f9e9e;
+  color: #d0d0d0;
+}
+
+.bricks-and-mortar-quiz .disable {
   color: #9b9b9b;
+  box-shadow: none;
+  background: #eee;
+}
+
+.bricks-and-mortar-quiz .disable h2 {
+  color: #9f9e9e;
+}
+
+.bricks-and-mortar-quiz .disable input {
+  background: none;
 }
