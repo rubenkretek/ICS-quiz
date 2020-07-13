@@ -71,6 +71,8 @@
 }
 
 .bricks-and-mortar-quiz button:hover {
+  cursor: pointer;
+  background: #01338e;
 }
 
 /*Question 2*/
