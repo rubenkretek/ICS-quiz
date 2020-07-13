@@ -133,3 +133,12 @@ span.currencyinput {
 .bricks-and-mortar-quiz .disable input {
   background: none;
 }
+
+/*Validation*/
+.amount-validation {
+  margin: -15px 0 20px 0;
+  font-size: 12px;
+  color: red;
+  font-weight: bold;
+  display: none;
+}

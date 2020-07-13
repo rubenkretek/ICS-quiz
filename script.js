@@ -68,21 +68,36 @@ function question2check() {
   let inputField = document.getElementById("2-input").value;
   borrowingAmount = inputField;
   let borrowingAmountPercantage = borrowingAmount * 1.3;
+  const validationMessage = document.querySelector(".amount-validation");
 
-  if (borrowingAmount < 250000) {
-    showAnswer(anwserNA, question2);
-  } else if (borrowingAmount >= 250000 && borrowingAmount <= 4000000) {
-    // Add 'amount borrowed x 1.3' to next question
-    amountTextField.innerHTML = borrowingAmountPercantage;
-    submitQuestion(question3, question2);
-  } else if (borrowingAmount > 4000000) {
-    checkAmount(borrowingAmount, question2);
+  if (inputField === "") {
+    validationMessage.classList.add("show");
+  } else {
+    validationMessage.classList.remove("show");
+    if (borrowingAmount < 250000) {
+      showAnswer(anwserNA, question2);
+    } else if (borrowingAmount >= 250000 && borrowingAmount <= 4000000) {
+      // Add 'amount borrowed x 1.3' to next question
+      amountTextField.innerHTML = borrowingAmountPercantage;
+      submitQuestion(question3, question2);
+    } else if (borrowingAmount > 4000000) {
+      checkAmount(borrowingAmount, question2);
+    }
   }
 }
 
 //Question 2b -----
 function question2bcheck() {
   let inputField = document.getElementById("2b-input").value;
-  borrowingAmount = inputField;
-  checkAmount(borrowingAmount, question2b);
+  let borrowingAmount = inputField;
+  const validationMessage = document.querySelector(
+    "#question-2b .amount-validation"
+  );
+
+  if (inputField === "") {
+    validationMessage.classList.add("show");
+  } else {
+    validationMessage.classList.remove("show");
+    checkAmount(borrowingAmount, question2b);
+  }
 }
