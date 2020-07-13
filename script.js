@@ -20,6 +20,7 @@ const anwserRaiseValuation = document.getElementById("answer-raise-valuation");
 function showAnswer(answer, questionToDisable) {
   answer.classList.add("show");
   disableQuestion(questionToDisable);
+  moveViewport();
 }
 
 //Checks amount user wants to borrow and then shows the correct message based on amount
@@ -61,6 +62,15 @@ function disableQuestion(question) {
 function submitQuestion(questionShow, questionToDisable) {
   questionShow.classList.add("show");
   disableQuestion(questionToDisable);
+  moveViewport();
+}
+
+// Move viewport 200px
+function moveViewport() {
+  window.scrollBy({
+    top: 200,
+    behavior: "smooth",
+  });
 }
 
 //Question 2 ------
