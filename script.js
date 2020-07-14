@@ -9,12 +9,12 @@ const question3 = document.getElementById("question-3");
 const question4 = document.getElementById("question-4");
 const question5 = document.getElementById("question-5");
 
-const anwserSME = document.getElementById("answer-sme");
-const anwserExecutive = document.getElementById("answer-executive");
-const anwserCorporate = document.getElementById("answer-corporate");
-const anwserNA = document.getElementById("answer-na");
-const anwserTooLow = document.getElementById("answer-too-low");
-const anwserRaiseValuation = document.getElementById("answer-raise-valuation");
+const answerSME = document.getElementById("answer-sme");
+const answerExecutive = document.getElementById("answer-executive");
+const answerCorporate = document.getElementById("answer-corporate");
+const answerNA = document.getElementById("answer-na");
+const answerTooLow = document.getElementById("answer-too-low");
+const answerRaiseValuation = document.getElementById("answer-raise-valuation");
 
 // shows answer and disable question
 function showAnswer(answer, questionToDisable) {
@@ -32,16 +32,16 @@ function checkAmount(borrowingAmount, questionToDisable) {
   const corporateMin = 10000000;
 
   if (borrowingAmount < SMEMin) {
-    showAnswer(anwserTooLow, questionToDisable);
+    showAnswer(answerTooLow, questionToDisable);
   } else if (borrowingAmount >= SMEMin && borrowingAmount < SMEMax) {
-    showAnswer(anwserSME, questionToDisable);
+    showAnswer(answerSME, questionToDisable);
   } else if (
     borrowingAmount >= executiveMin &&
     borrowingAmount < executiveMax
   ) {
-    showAnswer(anwserExecutive, questionToDisable);
+    showAnswer(answerExecutive, questionToDisable);
   } else if (borrowingAmount >= corporateMin) {
-    showAnswer(anwserCorporate, questionToDisable);
+    showAnswer(answerCorporate, questionToDisable);
   }
 }
 
@@ -85,7 +85,7 @@ function question2check() {
   } else {
     validationMessage.classList.remove("show");
     if (borrowingAmount < 250000) {
-      showAnswer(anwserNA, question2);
+      showAnswer(answerNA, question2);
     } else if (borrowingAmount >= 250000 && borrowingAmount <= 4000000) {
       // Add 'amount borrowed x 1.3' to next question
       amountTextField.innerHTML = borrowingAmountPercantage;
