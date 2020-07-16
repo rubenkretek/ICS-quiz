@@ -19,6 +19,7 @@
         </div>
 
         <div id="question-2" class="question">
+          <a class="step-back" onclick="stepBack(question2, question1)">Back</a>
           <h2>What are you looking to borrow?</h2>
           <div class="user-input-container">
             <span class="currencyinput"
@@ -33,6 +34,9 @@
         </div>
 
         <div id="question-2b" class="question">
+          <a class="step-back" onclick="stepBack(question2b, question1)"
+            >Back</a
+          >
           <h2>What are you looking to borrow?</h2>
           <div class="user-input-container">
             <span class="currencyinput"
@@ -45,6 +49,7 @@
         </div>
 
         <div id="question-3" class="question">
+          <a class="step-back" onclick="stepBack(question3, question2)">Back</a>
           <h2>
             Is your property valued more than £<span
               id="amount-borrowing"
@@ -60,6 +65,7 @@
         </div>
 
         <div id="question-4" class="question">
+          <a class="step-back" onclick="stepBack(question4, question3)">Back</a>
           <h2>Do you have O/S mortgage or liens?</h2>
           <div class="user-input-container">
             <button onclick="submitQuestion(question5,question4)">Yes</button>
@@ -70,6 +76,7 @@
         </div>
 
         <div id="question-5" class="question">
+          <a class="step-back" onclick="stepBack(question5, question4)">Back</a>
           <h2>Are liens more than 60% of the value?</h2>
           <div class="user-input-container">
             <button onclick="checkAmount(borrowingAmount, question5);">

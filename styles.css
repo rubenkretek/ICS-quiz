@@ -36,6 +36,7 @@
   box-shadow: 0px 8px 16px 0px #00000026;
   display: none;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .bricks-and-mortar-quiz .answer {
@@ -149,6 +150,10 @@ span.currencyinput {
   color: #d0d0d0;
 }
 
+.bricks-and-mortar-quiz .disable .step-back {
+  display: none;
+}
+
 .bricks-and-mortar-quiz .disable {
   color: #9b9b9b;
   box-shadow: none;
@@ -170,6 +175,19 @@ span.currencyinput {
   color: red;
   font-weight: bold;
   display: none;
+}
+
+/*Step back button*/
+.step-back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #ca0606;
+  font-family: "PT Sans", sans-serif;
+  text-decoration: underline;
+  padding: 10px;
 }
 
 /*Responsive*/
