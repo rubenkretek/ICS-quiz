@@ -20,7 +20,7 @@ const answerRaiseValuation = document.getElementById("answer-raise-valuation");
 function showAnswer(answer, questionToDisable) {
   answer.classList.add("show");
   disableQuestion(questionToDisable);
-  moveViewport();
+  moveViewportDown();
 }
 
 //Checks amount user wants to borrow and then shows the correct message based on amount
@@ -58,17 +58,45 @@ function disableQuestion(question) {
   question.classList.add("disable");
 }
 
+//disables buttons and adds "disable" class to the question
+function enableQuestion(question) {
+  var buttons = question.querySelectorAll("button");
+  var inputs = question.querySelectorAll("input");
+  buttons.forEach((element) => {
+    element.disabled = false;
+  });
+  inputs.forEach((element) => {
+    element.disabled = false;
+  });
+  question.classList.remove("disable");
+}
+
 // Shows next question and disbles current question
 function submitQuestion(questionShow, questionToDisable) {
   questionShow.classList.add("show");
   disableQuestion(questionToDisable);
-  moveViewport();
+  moveViewportDown();
 }
 
-// Move viewport 200px
-function moveViewport() {
+// Go back a step
+function stepBack(questionHide, questionToEnable) {
+  questionHide.classList.remove("show");
+  enableQuestion(questionToEnable);
+  moveViewportUp();
+}
+
+// Move viewport down 200px
+function moveViewportDown() {
   window.scrollBy({
     top: 200,
+    behavior: "smooth",
+  });
+}
+
+// Move viewport up 200px
+function moveViewportUp() {
+  window.scrollBy({
+    top: -200,
     behavior: "smooth",
   });
 }
